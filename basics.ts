@@ -91,7 +91,22 @@ let p = {
     firstName:'Bruce',
     lastName:'Wayne'
 }
+
 fullName(p);
+
+let myObj = {size: 10, label: "Size 10 Object"};
+printLabel(myObj); //The complier only checks that the object has at least the types requiered
+
+interface LabeledValue {
+    label: string;
+}
+
+function printLabel2(labeledObj: LabeledValue) { //apllying the interface LabeledValue
+    console.log(labeledObj.label);
+}
+
+let myObj2 = {size: 10, label: "Size 10 Object"};
+printLabel2(myObj2); //dont need the specify the implementation of the interface
 
 //*classes
 
@@ -124,4 +139,8 @@ class Manager extends Employee{
 let m1 = new Manager('Bruce');
 m1.greet();
 m1.delegate();
+
+function printLabel(labeledObj: { label: string }) {
+    console.log(labeledObj.label);
+}
 

@@ -82,6 +82,8 @@ var p = {
     lastName: 'Wayne'
 };
 fullName(p);
+var myObj = { size: 10, label: "Size 10 Object" };
+printLabel(myObj); //The complier only checks that the object has at least the types requiered
 //*classes
 var Employee = /** @class */ (function () {
     function Employee(name) {
@@ -107,3 +109,6 @@ var Manager = /** @class */ (function (_super) {
 var m1 = new Manager('Bruce');
 m1.greet();
 m1.delegate();
+function printLabel(labeledObj) {
+    console.log(labeledObj.label);
+}

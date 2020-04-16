@@ -1,3 +1,4 @@
+export {} 
 type numArray = Array<number>; 
 type stringArray = Array<string>; 
 
